@@ -6,7 +6,9 @@
  *
  * -----------------------------------------------------------------------------
  *
- * Requires https://github.com/jprodgers/LoLshield by @jprodgers
+ * ~~Requires https://github.com/jprodgers/LoLshield by @jprodgers~~
+ * Requires https://github.com/ishotjr/LoLshield
+ * (forked to add variable Banner speed)
  *
  * -----------------------------------------------------------------------------
  *
@@ -72,7 +74,7 @@ void loop() {
   Serial.println(messageLength);
   
   // message must be unsigned char*
-  Myfont::Banner(messageLength, message);
+  Myfont::Banner(messageLength, message, 35);
 
   //Serial.println(newlineReceived);
 
