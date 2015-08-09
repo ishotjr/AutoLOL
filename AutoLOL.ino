@@ -44,6 +44,9 @@ boolean newlineReceived = false;
 
 void setup() {
   
+  // initialize serial
+  Serial.begin(9600);
+  
   // check for/load valid message data in EEPROM
   byte id = EEPROM.read(ID_ADDR);
   if (id == EEPROM_ID) {
@@ -85,10 +88,7 @@ void setup() {
   
   // initialize LoL Shield
   LedSign::Init();
-  
-  // initialize serial
-  Serial.begin(9600);
-  
+    
   Serial.println("setup complete");
 }
 
